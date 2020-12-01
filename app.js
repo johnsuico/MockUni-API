@@ -47,5 +47,5 @@ app.get('/', (req, res) => {
 
 // Listen
 app.listen(process.env.PORT, (req, res) => {
-    console.log(`API started on port: ${PORT}`);
+    console.log(`API started on port: ${process.env.PORT}`);
 });
