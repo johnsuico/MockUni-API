@@ -12,7 +12,7 @@ app.use(cors());
 
 // Port number to be used to access the backend
 // Locally: localhost:5000
-const PORT = 5000 | process.env.PORT;
+// const PORT = 5000 | process.env.PORT;
 
 // Connect to MongoDB
 const MONGOOSE_URI = "mongodb+srv://cmpe172:cmpe172@mockunidb.t7ssh.mongodb.net/<dbname>?retryWrites=true&w=majority"
@@ -46,6 +46,6 @@ app.get('/', (req, res) => {
 })
 
 // Listen
-app.listen(PORT, (req, res) => {
+app.listen(process.env.PORT, (req, res) => {
     console.log(`API started on port: ${PORT}`);
 });
